@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Calculator
+        </title>
+
+        <link rel="stylesheet" href="calc.css">
+    </head>
+
+    <body>
+        <div class="final-result"></div>
+
+        <div class="row">
+            <button class="numbers" onclick="buttons(1)">1</button>
+            <button class="numbers" onclick="buttons(2)">2</button>
+            <button class="numbers" onclick="buttons(3)">3</button>
+            <button class="operations" onclick="buttons(' + ')">+</button>
+        </div>
+
+        <div class="row">
+            <button class="numbers" onclick="buttons(4)">4</button>
+            <button class="numbers" onclick="buttons(5)">5</button>
+            <button class="numbers" onclick="buttons(6)">6</button>
+            <button class="operations" onclick="buttons(' - ')">-</button>
+        </div>
+
+        <div class="row">
+            <button class="numbers" onclick="buttons (7)">7</button>
+            <button class="numbers" onclick="buttons(8)">8</button>
+            <button class="numbers" onclick="buttons (9)">9</button>
+            <button class="operations" onclick="buttons(' * ')">*</button>
+        </div>
+
+        <div class="row">
+            <button class="numbers" onclick="buttons(0)">0</button>
+            <button class="numbers" onclick="buttons('.')">.</button>
+            <button class="numbers" onclick="
+                localStorage.setItem('result', result);
+                result = (eval(result));
+                finalResult();
+                ">=</button>
+            <button class="operations" onclick="buttons(' / ')">/</button>
+        </div>
+
+        <div>
+            <button class="reset" onclick="
+                result = '';
+                finalResult();
+                localStorage.removeItem('result');
+                ">Clear</button>
+        </div>
+
+        <script src="calc.js"></script>
+    </body>
+</html>
